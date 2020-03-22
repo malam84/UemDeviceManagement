@@ -1,0 +1,20 @@
+{
+  "name": "cordova-plugin-bbd-configure",
+  "version": "1.2.0",
+  "description": "The BBD Cordova Configure plugin is used to properly point BBD Cordova plugins to BlackBerry Dynamics SDKs for iOS and Android.",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "name": "cordova-plugin-bbd-configure",
+    "version": "1.2.0",
+    "private": true
+  },
+  "author": "",
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "plugins": [],
+  "devDependencies": {},
+  "dependencies": {},
+  "supportedCordovaVersions": ["8.1.2"]
+}

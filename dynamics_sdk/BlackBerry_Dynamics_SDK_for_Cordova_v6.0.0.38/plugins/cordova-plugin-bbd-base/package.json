@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-bbd-base",
+  "version": "3.0.0",
+  "description": "This is Base plugin. It adds all the needed configuration to enable using BlackBerry Dynamics in your Cordova application. All the other BBDCordova plugins require Base plugin to be installed.",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "name": "cordova-plugin-bbd-base",
+    "version": "3.0.0",
+    "private": true
+  },
+  "author": "",
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "plugins": [],
+  "devDependencies": {},
+  "dependencies": {
+    "shelljs": "^0.7.0",
+    "fs-extra": "^2.0.0",
+    "plist": "^2.0.0",
+    "xml-parser": "^1.2.1",
+    "cordova-common": "^1.4.0"
+  }
+}

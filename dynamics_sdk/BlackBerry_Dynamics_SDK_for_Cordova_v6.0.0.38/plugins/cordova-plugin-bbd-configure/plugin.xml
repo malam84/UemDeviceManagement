@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-bbd-configure"
+        version="1.2.0">
+
+  <name>BBD Configure Plugin</name>
+
+  <description>The BBD Cordova Configure plugin is used to properly point BBD Cordova plugins to BlackBerry Dynamics SDKs for iOS and Android.</description>
+
+  <keywords>cordova,plugin,configure</keywords>
+
+  <license>(c) 2018 BlackBerry Limited. All rights reserved.</license>
+
+  <engines>
+    <engine name="cordova-android" version=">=7.1.4"/>
+    <engine name="cordova-ios" version=">=4.5.5"/>
+  </engines>
+
+  <hook type="after_plugin_add" src="scripts/hooks/afterPluginAdd.js" />
+</plugin>

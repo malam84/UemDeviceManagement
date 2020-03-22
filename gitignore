@@ -1,0 +1,6 @@
+www/
+node_modules/
+tmp/
+temp/
+platforms/
+plugins/

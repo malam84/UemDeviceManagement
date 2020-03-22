@@ -1,0 +1,13 @@
+//
+//  default.xcconfig
+//
+//  (c) 2018 BlackBerry Limited. All rights reserved.
+//
+
+
+// Build configuration for BlackBerry Dynamics SDK for iOS. Please do not remove it!!!
+FIPS_PACKAGE=$(CURRENT_ARCH).sdk
+LDPLUSPLUS=$(HOME)/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld
+LD=$(HOME)/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld
+ENTITLEMENTS_REQUIRED=YES
+CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator10.*]=$(SRCROOT)/$(PROJECT_NAME)/Resources/Entitlements.plist

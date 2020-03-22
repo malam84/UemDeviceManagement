@@ -1,0 +1,33 @@
+    <!-- Android -->
+    <platform name="android">
+        <framework src="scripts/gradle/bbd.gradle" custom="true" type="gradleReference" />
+        <framework src="com.android.support:support-v4:24.1.1" />
+        <resource-file src="assets/android/settings.json" target="assets/settings.json" />
+        <resource-file src="assets/android/com.blackberry.dynamics.settings.json" target="assets/com.blackberry.dynamics.settings.json" />
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <use-sdk android:minSdkVersion="23" android:targetSdkVersion="27" />
+        </config-file>
+        <edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application" mode="merge">
+            <application android:label="@string/app_name"
+                android:name="com.good.gd.cordova.core.BBDCordovaApp"
+                android:fullBackupContent="@xml/gd_backup_scheme"
+                android:supportsRtl="false"/>
+        </edit-config>
+
+        <edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application/activity" mode="merge">
+            <activity android:name="com.good.gd.cordova.core.MainActivity"/>
+        </edit-config>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="BBDMailTo">
+                <param name="android-package" value="com.good.gd.cordova.core.mailto.BBDMailToHandler" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+    
+        <source-file src="scripts/gradle/gradle.properties" target-dir="src/.." />
+        <lib-file src="src/android/libs/bbd-base.jar"/>
+        <hook type="after_plugin_install" src="scripts/hooks/android/afterBasePluginInstall.js" />
+        <hook type="before_compile" src="scripts/hooks/android/beforeCompile.js" />
+    </platform>

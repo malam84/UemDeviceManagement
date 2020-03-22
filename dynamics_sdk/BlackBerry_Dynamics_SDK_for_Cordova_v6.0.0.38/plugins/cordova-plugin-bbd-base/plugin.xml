@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-bbd-base" version="3.0.0">
+    <name>Base Plugin</name>
+    <description>
+        This is Base plugin. It adds all the needed configuration to enable using
+        BlackBerry Dynamics in your Cordova application.
+        All the other BlackBerry Dynamics Cordova plugins require the Base plugin to be installed.
+    </description>
+    <keywords>cordova,plugin,base,gd</keywords>
+    <license>(c) 2018 BlackBerry Limited. All rights reserved.</license>
+    <info>
+        This plugin enables using BlackBerry Dynamics in your Cordova application.
+        IMPORTANT NOTE: Install BlackBerry Dynamics Cordova Configure plugin (see README.md file for more details)
+    </info>
+    <engines>
+        <engine name="cordova-android" version=">=7.1.4" />
+        <engine name="cordova-ios" version=">=4.5.5" />
+    </engines>
+        <!-- Android -->
+    <platform name="android">
+        <framework src="scripts/gradle/bbd.gradle" custom="true" type="gradleReference" />
+        <framework src="com.android.support:support-v4:24.1.1" />
+        <resource-file src="assets/android/settings.json" target="assets/settings.json" />
+        <resource-file src="assets/android/com.blackberry.dynamics.settings.json" target="assets/com.blackberry.dynamics.settings.json" />
+    
+        <source-file src="scripts/gradle/gradle.properties" target-dir="src/.." />
+        <lib-file src="src/android/libs/bbd-base.jar"/>
+        <hook type="after_plugin_install" src="scripts/hooks/android/afterBasePluginInstall.js" />
+        <hook type="before_compile" src="scripts/hooks/android/beforeCompile.js" />
+    </platform>
+
+    <!-- iOS -->
+    <hook type="after_plugin_install" src="scripts/hooks/afterBasePluginInstall.js" />
+    <hook type="before_plugin_rm" src="scripts/hooks/beforePluginRemove.js" />
+</plugin>

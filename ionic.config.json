@@ -1,5 +1,7 @@
 {
   "name": "UemDeviceManagement",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

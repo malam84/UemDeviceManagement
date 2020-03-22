@@ -1,0 +1,34 @@
+    <!-- iOS -->
+    <platform name="ios">
+        <framework src="GD.framework" />
+        <framework src="WebKit.framework" weak="true" />
+        <framework src="LocalAuthentication.framework" />
+        <framework src="DeviceCheck.framework" />
+        <framework src="CFNetwork.framework" />
+        <framework src="CoreData.framework" />
+        <framework src="CoreTelephony.framework" />
+        <framework src="QuartzCore.framework" />
+        <framework src="Security.framework" />
+        <framework src="MessageUI.framework" />
+        <framework src="SystemConfiguration.framework" />
+        <framework src="MobileCoreServices.framework" />
+        <framework src="CoreGraphics.framework" />
+        <framework src="AssetsLibrary.framework" />
+        <framework src="libz.tbd" />
+        <framework src="src/ios/frameworks/BbdBasePlugin.framework" custom="true" />
+        <resource-file src="src/ios/resources/GDAssets.bundle" />
+        <config-file parent="GDConsoleLogger" target="*-Info.plist">
+                <string>GDFilterDetailed</string>
+        </config-file>
+        <config-file parent="BlackBerryDynamics" target="*-Info.plist">
+            <key>BlackBerryDynamics</key>
+             <dict>
+                <key>CheckEventReceiver</key>
+                <false></false>
+            </dict>
+        </config-file>
+        <resource-file src="src/ios/Entitlements.plist" />
+        <hook type="after_plugin_install" src="scripts/hooks/ios/afterBasePluginInstall.js" />
+        <hook type="after_platform_update" src="scripts/hooks/ios/afterPlatformUpdate.js" />
+        <hook type="before_compile" src="scripts/hooks/ios/beforeCompile.js" />
+    </platform>

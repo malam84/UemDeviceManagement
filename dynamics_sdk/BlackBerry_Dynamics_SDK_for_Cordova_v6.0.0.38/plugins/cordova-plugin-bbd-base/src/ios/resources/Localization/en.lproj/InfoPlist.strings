@@ -1,0 +1,6 @@
+/*
+ * (c) 2017 BlackBerry Limited. All rights reserved.
+ */
+
+/* Value for NSFaceIDUsageDescription key displayed to user on first attempt to use Face ID */
+"NSFaceIDUsageDescription" = "Enables authentication without a password.";
