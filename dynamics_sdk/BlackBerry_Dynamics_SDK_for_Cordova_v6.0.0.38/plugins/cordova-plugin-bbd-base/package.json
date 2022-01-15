@@ -16,7 +16,7 @@
   "plugins": [],
   "devDependencies": {},
   "dependencies": {
-    "shelljs": "^0.7.0",
+    "shelljs": "^0.8.5",
     "fs-extra": "^2.0.0",
     "plist": "^2.0.0",
     "xml-parser": "^1.2.1",
