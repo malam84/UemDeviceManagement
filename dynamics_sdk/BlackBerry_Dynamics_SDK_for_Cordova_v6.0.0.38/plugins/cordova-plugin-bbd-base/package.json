@@ -18,7 +18,7 @@
   "dependencies": {
     "shelljs": "^0.7.0",
     "fs-extra": "^2.0.0",
-    "plist": "^2.0.0",
+    "plist": "^3.0.4",
     "xml-parser": "^1.2.1",
     "cordova-common": "^1.4.0"
   }
